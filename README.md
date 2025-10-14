@@ -142,3 +142,46 @@ ERROR            | 2
 2024-01-22 09:00:45 - Database connection failed.
 2024-01-22 11:30:15 - Backup process failed.
 ```
+
+## Task 4
+
+### Task description
+
+Complete the console assistant bot from the previous homework and add error handling using decorators.
+
+Requirements:
+
+1. All user input errors must be handled using the input_error decorator.
+2. This decorator is responsible for returning user-friendly messages such as "Enter user name", "Give me name and phone please", etc.
+3. The input_error decorator must handle exceptions that occur in the handler functions — specifically: KeyError, ValueError, and IndexError.
+4. When an exception occurs, the decorator should return an appropriate response message to the user, without terminating the program’s execution.
+
+### Execution
+
+1. Open a terminal and navigate to the `task_4` folder:
+
+   ```bash
+   cd path/to/task_4
+   ```
+
+2. Run the console bot script:
+
+   ```bash
+   python main.py
+   ```
+
+3. The program will wait for your commands. Use valid commands listed in the commnds section.
+
+### Comands
+
+The assistant supports the following commands:
+
+- **`hello`** — greets the user with a friendly message.
+- **`add [name] [phone number]`** — adds a new contact to the contact list.
+- **`change [name] [new phone number]`** — updates the phone number of an existing contact.
+- **`phone [name]`** — displays the phone number of the specified contact.
+- **`all`** — shows all saved contacts with their phone numbers.
+- **`close`** or **`exit`** — ends the program with a farewell message.
+
+Any command that does not match the formats above will be considered invalid.
+Commands are case-insensitive.
