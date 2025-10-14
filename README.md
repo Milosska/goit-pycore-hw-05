@@ -86,3 +86,59 @@ Expected output:
 ```yaml
 Загальний дохід: 1351.46
 ```
+
+## Task 3
+
+### Task description
+
+Develop a Python script for analyzing log files. The script should be able to read a log file provided as a command-line argument and display statistics by log levels, for example, INFO, ERROR, DEBUG. Additionally, the user can specify a log level as a second command-line argument to see all entries of that level.
+
+Requirements:
+
+1. The script fulfills all the requirements, correctly analyzing log files and displaying the information.
+2. The script properly handles errors, such as incorrect log file format or missing file.
+3. During development, at least one element of functional programming must be used: a lambda function, list comprehension, the filter function, etc.
+4. The code is well-structured, clear, and contains comments where necessary.
+
+### Execution
+
+1. **Run the main program**
+
+To see the logs statistics go to the `task_3` folder and run:
+
+```bash
+python main.py [path/to/log/file]
+```
+
+To see the logs per type run:
+
+```bash
+python main.py [path/to/log/file] [log_type]
+```
+
+2. **Run the test cases**
+   To test individual components run test files as modules:
+
+```bash
+python -m tests.handlers_tests
+```
+
+### Example Usage
+
+```bash
+python main.py logs.txt error
+```
+
+Expected output:
+
+```yaml
+-----------------|----------
+DEBUG            | 3
+INFO             | 4
+WARNING          | 1
+ERROR            | 2
+
+Деталі логів для рівня ERROR:
+2024-01-22 09:00:45 - Database connection failed.
+2024-01-22 11:30:15 - Backup process failed.
+```
